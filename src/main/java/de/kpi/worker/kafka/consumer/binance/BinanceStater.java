@@ -1,6 +1,5 @@
 package de.kpi.worker.kafka.consumer.binance;
 
-import de.kpi.worker.kafka.consumer.deserializer.KafkaMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.microprofile.reactive.messaging.Incoming;
 
