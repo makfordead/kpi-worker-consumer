@@ -1,0 +1,63 @@
+"%bitmex":
+  kafka:
+    bootstrap:
+      servers: localhost:9092
+  mp:
+    messaging:
+      incoming:
+        bitmex-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+
+
+"%binance":
+  kafka:
+    bootstrap:
+      servers: localhost:9092
+  mp:
+    messaging:
+      incoming:
+        binance-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+
+
+"%bitstamp":
+  kafka:
+    bootstrap:
+      servers: localhost:9092
+  mp:
+    messaging:
+      incoming:
+        bitstamp-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
+"%coinbase":
+  kafka:
+    bootstrap:
+      servers: localhost:9092
+  mp:
+    messaging:
+      incoming:
+        coinbase-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
+"%kraken":
+  kafka:
+    bootstrap:
+      servers: localhost:9092
+  mp:
+    messaging:
+      incoming:
+        kraken-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
