@@ -1,4 +1,4 @@
-package de.kpi.worker.kafka.consumer.deserializer;
+package de.kpi.worker.kafka.consumer.all.deserializer;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

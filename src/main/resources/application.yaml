@@ -8,7 +8,7 @@
         bitmex-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.bitmex.deserializer.BitmexDeserializer
 
 
 "%binance":
@@ -21,7 +21,7 @@
         binance-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.binance.deserializer.BinanceDeserializer
 
 
 "%bitstamp":
@@ -34,7 +34,7 @@
         bitstamp-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.bitstamp.deserializer.BitstampDeserializer
 
 
 "%coinbase":
@@ -47,7 +47,7 @@
         coinbase-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.coinbase.deserializer.CoinbaseDeserializer
 
 
 "%kraken":
@@ -60,7 +60,7 @@
         kraken-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.kraken.deserializer.KrakenDeserializer
 
 
 "%all":
@@ -73,20 +73,20 @@
         kraken-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.all.deserializer.TickerDeserializer
         coinbase-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.all.deserializer.TickerDeserializer
         bitstamp-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.all.deserializer.TickerDeserializer
         binance-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.all.deserializer.TickerDeserializer
         bitmex-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.all.deserializer.TickerDeserializer

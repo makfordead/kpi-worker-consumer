@@ -1,4 +1,4 @@
-package de.kpi.worker.kafka.consumer;
+package de.kpi.worker.kafka.consumer.all;
 
 import io.smallrye.reactive.messaging.annotations.Incomings;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Slf4j
 @ApplicationScoped
-public class KpiWorkerStater {
+public class DataFeedStater {
 
     @Incomings(value = {@Incoming("binance-data-feed"), @Incoming("bitmex-data-feed"), @Incoming("bitstamp-data-feed"),
             @Incoming("coinbase-data-feed"), @Incoming("kraken-data-feed")})
