@@ -1,5 +1,6 @@
-package de.kpi.worker.kafka.consumer.bitstamp;
+package de.kpi.worker.kafka.consumer;
 
+import io.smallrye.reactive.messaging.annotations.Incomings;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.microprofile.reactive.messaging.Incoming;
 
@@ -10,9 +11,10 @@ import java.util.Map;
 
 @Slf4j
 @ApplicationScoped
-public class BitstampStater {
+public class KpiWorkerStater {
 
-    @Incoming("bitstamp-data-feed")
+    @Incomings(value = {@Incoming("binance-data-feed"), @Incoming("bitmex-data-feed"), @Incoming("bitstamp-data-feed"),
+            @Incoming("coinbase-data-feed"), @Incoming("kraken-data-feed")})
     public void consume(final List<Map<String, Object>> value) {
         value.forEach(v -> log.info("value: {}", v));
     }

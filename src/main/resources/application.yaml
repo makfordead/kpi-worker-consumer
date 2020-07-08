@@ -34,7 +34,7 @@
         bitstamp-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
 
 
 "%coinbase":
@@ -47,7 +47,7 @@
         coinbase-data-feed:
           connector: smallrye-kafka
           value:
-            deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
 
 
 "%kraken":
@@ -58,6 +58,35 @@
     messaging:
       incoming:
         kraken-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+
+
+"%all":
+  kafka:
+    bootstrap:
+      servers: localhost:9092
+  mp:
+    messaging:
+      incoming:
+        kraken-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+        coinbase-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+        bitstamp-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+        binance-data-feed:
+          connector: smallrye-kafka
+          value:
+            deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
+        bitmex-data-feed:
           connector: smallrye-kafka
           value:
             deserializer: de.kpi.worker.kafka.consumer.deserializer.TickerDeserializer
